@@ -1,13 +1,10 @@
-let weather = {
-    "apiKey": "QAJDERH6PU6WFWB5RQ7TJYT4J"
-}
+
 const input = document.querySelector('.search__input');
 const tempProp = document.querySelector('.temp')
 const description = document.querySelector('.description')
 const rainChance = document.querySelector('.rain')
 
 window.addEventListener('load', ()=>{
-    // let time = new Date("June 13, 20222 12:00:00");
     let long;
     let lat;
     if(navigator.geolocation){
@@ -48,9 +45,7 @@ const searchPlace = () =>{
 
 btn.addEventListener('click', searchPlace)
 
-let findPlaceApi = {
-    "apiKey": "a905017116454dc79e68189bd7d43d90"
-}
+
 const findGeolocation = (place) =>{
     fetch(`https://api.geoapify.com/v1/geocode/search?text=${place}&lang=en&limit=10&type=city&apiKey=${findPlaceApi.apiKey}`)
     .then(response =>{
